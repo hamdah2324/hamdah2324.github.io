@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color:rgb(78, 78, 46); /* Main color variable */
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%; /* Border radius values */
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%; /* Border radius values on hover */
+    --border:.2rem solid var(--main-color); /* Border style */
+    --border-hover:.2rem dashed var(--main-color); /* Border style on hover */
+}
+
+* {
+    font-family: 'Poppins', sans-serif; /* Set the font family for all elements */
+    margin:0; padding:0; /* Reset margin and padding */
+    box-sizing: border-box; /* Include borders and padding in the element's total width and height */
+    outline: none; border:none; /* Remove outline and border styles */
+    text-decoration: none; /* Remove text decoration */
+    text-transform: capitalize; /* Capitalize the first letter of each word in text */
+    transition: all .2s linear; /* Add transition effect for all properties with a linear timing function */
+}
+
+html {
+    font-size: 62.5%; /* Set the base font size to 62.5% of the default size (for easy rem calculations) */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-padding-top: 7rem; /* Set padding top for smooth scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+
+section {
+    padding:2rem 9%; /* Add padding to sections */
+}
+
+.heading {
+    font-size: 15rem; /* Set font size for heading */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: .09rem var(--main-color); /* Add stroke to the text */
+    letter-spacing: .2rem; /* Add letter spacing */
+    text-align: center; /* Center align the text */
+    pointer-events: none; /* Disable pointer events on the heading */
+    position: relative; /* Set the position to relative for positioning child elements */
+    margin-top: 3rem; /* Add top margin to the heading */
+}
+
+
+
+.heading span{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:var(--main-color);
+    font-size: 5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding:.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color:var(--main-color);
+    background-color: bisque;
+    border:var(--border);
+    cursor: pointer;
+    margin-top: 6rem;
+    font-size: 1.7rem;
+    
+}
+
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border:var(--border-hover);
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: rgb(244, 212, 172);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 0 9%;
+    
+}
+
+/*elemants inside nav bar*/
+
+.header .navbar a {
+    margin: 0 4rem;
+    font-size: 2.1rem;
+    color: rgb(21, 1, 1);
+}
+
+
+/*adjusting logo*/
+
+header img{
+    height: 8rem;
+    width: 20rem; /* Adjust the height of the logo as needed */
+    margin-left: -9rem;
+}
+
+
+
+.header .btn{
+    margin-top: 0;
+}
+
+
+body{background-image: url(bgnew2.png);
+}
+
+/* book a table section starts*/
+
+.book form{
+    margin:0 auto 2rem auto;
+    max-width: 60rem;
+    border-radius: var(--border-radius-hover);
+    padding:3rem;
+    border:var(--border);
+    background-color: rgb(249, 239, 226);
+}
+
+.book form .box{
+    width:100%;
+    padding:1rem 1.2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    text-transform: none;
+    color:var(--main-color);
+    border:var(--border);
+    margin:.7rem 0;
+    background-color: bisque;
+}
+
+.book form .box:focus{
+    border:var(--border-hover);
+}
+
+.book form textarea{
+    height:15rem;
+    resize: none;
+}
+
+
+
+
+
+/* footer start */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+    background-color:bisque;
+    background-position: absolute;
+    padding-left :4%;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:rgb(85, 63, 22);
+    font-family: 'Cutive Mono',monospace;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.8rem;
+    padding:1rem 0;
+    color:rgb(71, 52, 27);
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem 1rem;
+    margin-top: 1rem;
+    color:var(--main-color);
+}
+
+.footer .credit span{
+    border-bottom: var(--border-hover);
+}
+/* footer end */
+
+
+
+
+
+
+/* media queries  */
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .heading{
+        font-size: 6rem;
+    }
+
+    .heading span{
+        font-size: 2.3rem;
+    }
+
+    #menu-btn{
+        display: initial;
+    }
+
+    #menu-btn.fa-times{
+        transform:rotate(180deg);
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:99%; left:0; right:0;
+        background:#fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .navbar a{
+        display: block;
+        font-size: 2.2rem;
+        margin:0;
+        padding:1.5rem 2rem;
+    }
+
+    .home{
+        text-align: center;
+    }
+
+    .home .row .content h3{
+        font-size: 4rem;
+    }
+
+    .menu .box-container .box{
+        margin-left: 0;
+        margin-top: 6rem;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .menu .box-container .box img{
+        margin-left: 0;
+        margin-top: -6rem;
+    }
+
+}
+
+@media(max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .home .row .image img{
+        height: auto;
+        width: 100%;
+    }
+
+}

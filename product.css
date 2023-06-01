@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color:rgb(78, 78, 46); /* Main color variable */
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%; /* Border radius values */
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%; /* Border radius values on hover */
+    --border:.2rem solid var(--main-color); /* Border style */
+    --border-hover:.2rem dashed var(--main-color); /* Border style on hover */
+}
+
+* {
+    font-family: 'Poppins', sans-serif; /* Set the font family for all elements */
+    margin:0; padding:0; /* Reset margin and padding */
+    box-sizing: border-box; /* Include borders and padding in the element's total width and height */
+    outline: none; border:none; /* Remove outline and border styles */
+    text-decoration: none; /* Remove text decoration */
+    text-transform: capitalize; /* Capitalize the first letter of each word in text */
+    transition: all .2s linear; /* Add transition effect for all properties with a linear timing function */
+}
+
+html {
+    font-size: 62.5%; /* Set the base font size to 62.5% of the default size (for easy rem calculations) */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-padding-top: 7rem; /* Set padding top for smooth scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+
+section {
+    padding:2rem 9%; /* Add padding to sections */
+}
+
+.heading {
+    font-size: 15rem; /* Set font size for heading */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: .09rem var(--main-color); /* Add stroke to the text */
+    letter-spacing: .2rem; /* Add letter spacing */
+    text-align: center; /* Center align the text */
+    pointer-events: none; /* Disable pointer events on the heading */
+    position: relative; /* Set the position to relative for positioning child elements */
+    margin-top: 3rem; /* Add top margin to the heading */
+}
+
+
+.heading span{
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-family: 'Special Elite', cursive;
+}
+
+/* styling for the button */
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: var(--white);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+/* hover effect for button*/
+.btn:hover{
+  background: var(--secondary);
+}
+
+/* styling the nav bar*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  background-color: rgb(244, 212, 172);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  padding: 0 9%;
+}
+
+/* styling the nav elemants*/
+.header .navbar a {
+  margin: 0 4rem;
+  font-size: 2.2rem;
+  color: rgb(21, 1, 1);
+
+}
+
+
+/* styling the logo*/
+
+header img{
+  height: 8rem;
+  width: 20rem; /* Adjust the height of the logo as needed */
+  margin-left: -20rem;
+}
+
+
+
+.header .btn{
+  margin-top: 0;
+}
+
+/* product */
+
+.product{
+  background-image: url(bgnew2.png);
+
+}
+
+.product .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  gap: 2rem;
+}
+
+.product .box-container .box{
+  background: var(--white);
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+
+}
+
+.product .box-container .box .image{
+  height: 35rem;
+  width: 100%;
+  padding: 1.1rem;
+}
+/* hover effect for box container */
+
+.product .box-container .box .image:hover {
+    transform: scale(1.1);
+    
+  }
+
+.product .box-container .box .image img{
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.product .box-container .box .content{
+  padding: 2rem;
+  padding-top: 0;
+  font-family: 'Cutive Mono', monospace;
+
+}
+
+.product .box-container .box .content h3{
+  color: var(--black);
+  font-size: 2.5rem;
+  font-family: 'Cutive Mono', monospace;
+}
+
+/* styling the star icon inside box container*/
+
+.product .box-container .box .content .stars{
+  padding: 1rem 0;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.product .box-container .box .content .stars i{
+  font-size: 1.7rem;
+  color: var(--secondary);
+
+}
+
+.product .box-container .box .content .price{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--secondary);
+  margin-right: 1rem;
+  font-family: 'Cutive Mono', monospace;
+}
+ 
+/* product end */
+
+
+
+/* reveiw start */
+
+.review .review-slider{
+    padding:7rem 0;
+    background-color:rgb(180, 158, 132)
+}
+
+.review .review-slider .box{
+    border:var(--border);
+    border-radius: var(--border-radius);
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    padding:2rem;
+}
+
+/* styling the quote icon inside the slider box */
+.review .review-slider .box .fa-quote-left{
+    position: absolute;
+    top:2rem; left: 2.5rem;
+    font-size: 6rem;
+    color:#fffafa;
+    z-index: -1;
+}
+
+.review .review-slider .box .fa-quote-right {
+  position: absolute; /* Position the quote icon absolutely */
+  bottom: 2rem; /* Sets the distance from the bottom of its container */
+  right: 2.5rem; /* Sets the distance from the right of its container */
+  font-size: 6rem; /* Sets the font size of the quote icon */
+  color: #ccc; /* Sets the color of the quote icon */
+  z-index: -1; /* Sets a negative z-index to position the icon behind other elements */
+}
+
+
+.review .review-slider .box:hover .fa-quote-left{
+    top:-6.5rem;
+}
+
+.review .review-slider .box:hover .fa-quote-right{
+    bottom:-6.5rem;
+}
+
+.review .review-slider .box img{
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    margin-bottom: .7rem;
+}
+
+.review .review-slider .box .stars{
+    padding:.5rem 0;
+}
+
+.review .review-slider .box .stars i{
+    font-size: 1.7rem;
+    color:var(--main-color);
+}
+
+.review .review-slider .box p{
+    font-size: 1.9rem;
+    color:whitesmoke;
+    padding:1rem 0;
+    line-height: 1.8;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.review .review-slider .box h3{
+    font-size: 2.2rem;
+    color:var(--main-color);
+    line-height: 1.8;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.review .review-slider .box span{
+    font-size: 1.5rem;
+    color:var(--main-color);
+}
+
+.swiper-pagination-bullet {
+  height:1.5rem; /* Set the height of the pagination bullet */
+  width:1.5rem; /* Set the width of the pagination bullet */
+  border-radius: 0; /* Remove border radius from the pagination bullet */
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--main-color);
+}
+
+/* reveiw end */
+
+
+/* newsletter start */
+
+.newsletter{
+  background: url(shoepastry.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.newsletter form{
+  max-width: 45rem;
+  text-align: center;
+  padding: 5rem 0;
+}
+.newsletter form h3{
+  font-size: 3rem;
+  color:rgb(112, 76, 32);
+  padding-bottom: .7rem;
+  font-family: 'Cutive Mono', monospace;
+}
+.newsletter form .box{
+  width: 100%;
+  margin: .7rem 0;
+  padding: 1rem 1.2rem;
+  color: var(--black);
+  border-radius: .5rem;
+}
+.newsletter form .box2{
+  width: 30%;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding: .5rem .5rem;
+  color: var(--black);
+  background-color: antiquewhite;
+  border-radius: 3rem;
+  cursor:pointer;
+  font-family: 'Cutive Mono', monospace;
+}
+.newsletter form .box2:hover{
+  color: var(--white);
+  background-color: var(--black);
+  outline: .1rem solid var(--white);
+}
+/* newsletter end */
+
+
+
+/* footer start */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+    background-color:bisque;
+    background-position: absolute;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:rgb(125, 98, 9);
+    font-family: 'Cutive Mono',monospace;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.8rem;
+    padding:1rem 0;
+    color:white;
+    color:rgba(116, 82, 47, 0.963);
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem 1rem;
+    margin-top: 1rem;
+    color:var(--main-color);
+}
+
+.footer .credit span{
+    border-bottom: var(--border-hover);
+}
+/* footer end */
+
+
+/* media queries for max-width: 991px */
+@media(max-width:991px){
+
+  html{
+      font-size: 55%; /* Reduce the font size of the HTML element for smaller screens */
+  }
+
+  .header{
+      padding:2rem; /* Adjust the padding of the header for smaller screens */
+  }
+
+  section{
+      padding:2rem; /* Adjust the padding of sections for smaller screens */
+  }
+
+}
+
+
+/* Responsive webpage queries */
+
+/* media queries for max-width: 768px */
+@media(max-width:768px){
+
+  .heading{
+      font-size: 6rem; /* Increase the font size of the heading for smaller screens */
+  }
+
+  .heading span{
+      font-size: 2.3rem; /* Adjust the font size of the span within the heading for smaller screens */
+  }
+
+  #menu-btn{
+      display: initial; /* Shows the menu button for smaller screens */
+  }
+
+  #menu-btn.fa-times{
+      transform:rotate(180deg); /* Rotate the menu button when in "close" state */
+  }
+
+  .header .navbar{
+      position: absolute; /* Change the position of the navbar to absolute for smaller screens */
+      top:99%; left:0; right:0; /* Adjust the positioning of the navbar */
+      background:#fff; /* Set a background color for the navbar */
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Create a clip-path to hide the navbar initially */
+  }
+
+  .header .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Change the clip-path to show the expanded navbar */
+  }
+
+  .header .navbar a{
+      display: block; /* Adjust the display of the navbar links */
+      font-size: 2.2rem; /* Adjust the font size of the navbar links */
+      margin:0;
+      padding:1.5rem 2rem; /* Adjust the padding of the navbar links */
+  }
+
+  .home{
+      text-align: center; /* Center align the content within the home section */
+  }
+
+  .home .row .content h3{
+      font-size: 4rem; /* Adjust the font size of the content heading within the home section */
+  }
+
+  .menu .box-container .box{
+      margin-left: 0; /* Remove the left margin of the menu box for smaller screens */
+      margin-top: 6rem; /* Adjust the top margin of the menu box for smaller screens */
+      flex-flow: column; 
+      text-align: center; /* Center align the text within the menu box */
+  }
+
+  .menu .box-container .box img{
+      margin-left: 0; /* Remove the left margin of the menu box image for smaller screens */
+      margin-top: -6rem; /* Adjust the top margin of the menu box image for smaller screens */
+  }
+
+}
+
+/* media queries for max-width: 450px */
+@media(max-width:450px){
+
+  html{
+      font-size: 50%; /* Further reduces the font size of the HTML element for smaller screens */
+  }
+
+  .home .row .image img{
+      height: auto; /* Adjust the height of the image within the home section to auto for smaller screens */
+      width: 100%; /* Set the width of the image within the home section to 100% for smaller screens */
+  }
+
+}

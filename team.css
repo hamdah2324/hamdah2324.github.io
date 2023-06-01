@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color:rgb(78, 78, 46); /* Main color variable */
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%; /* Border radius values */
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%; /* Border radius values on hover */
+    --border:.2rem solid var(--main-color); /* Border style */
+    --border-hover:.2rem dashed var(--main-color); /* Border style on hover */
+}
+
+* {
+    font-family: 'Poppins', sans-serif; /* Set the font family for all elements */
+    margin:0; padding:0; /* Reset margin and padding */
+    box-sizing: border-box; /* Include borders and padding in the element's total width and height */
+    outline: none; border:none; /* Remove outline and border styles */
+    text-decoration: none; /* Remove text decoration */
+    text-transform: capitalize; /* Capitalize the first letter of each word in text */
+    transition: all .2s linear; /* Add transition effect for all properties with a linear timing function */
+}
+
+html {
+    font-size: 62.5%; /* Set the base font size to 62.5% of the default size (for easy rem calculations) */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-padding-top: 7rem; /* Set padding top for smooth scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+
+section {
+    padding:2rem 9%; /* Add padding to sections */
+}
+
+.heading {
+    font-size: 15rem; /* Set font size for heading */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: .09rem var(--main-color); /* Add stroke to the text */
+    letter-spacing: .2rem; /* Add letter spacing */
+    text-align: center; /* Center align the text */
+    pointer-events: none; /* Disable pointer events on the heading */
+    position: relative; /* Set the position to relative for positioning child elements */
+    margin-top: 3rem; /* Add top margin to the heading */
+}
+
+.heading span{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:var(--main-color);
+    font-size: 3rem;
+}
+
+.btn{
+    display: inline-block;
+    padding:.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color:var(--main-color);
+    background-color: bisque;
+    border:var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    
+}
+
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border:var(--border-hover);
+}
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: rgb(244, 212, 172);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 0 9%;
+    
+}
+
+  .header .navbar a {
+    margin: 0 4rem;
+    font-size: 2.1rem;
+    color: rgb(21, 1, 1);
+}
+
+
+header img{
+    height: 8rem;
+    width: 20rem; /* Adjust the height of the logo as needed */
+    margin-left: -20rem;
+}
+
+
+
+.header .btn{
+    margin-top: 0;
+}
+
+
+
+/*Team*/
+
+.team{
+    width: 100%;
+    height: 90vh;
+    background-image: url(bgnew2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    margin-top: 100px;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.team h1 span{
+    color: #574720;
+    margin-left: 15px;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.team h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fce5bc;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.team .team_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 13%;
+}
+
+.team .team_box .profile{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+    border-radius: 20px;
+    height: 320px;
+}
+
+.team .team_box .profile img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+    border-radius: 20px;
+    margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+    top: 60%;
+}
+
+.team .team_box .profile .info .name{
+    color: #674c08;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.team .team_box .profile .info .bio{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    font-size: 14px;
+}
+
+.team .team_box .profile .info .team_icon i{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 100%;
+
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+    color: #fff713;
+}
+
+
+
+/* newsletter start */
+
+.newsletter{
+    background: url(toastwithpurple.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  .newsletter form{
+    max-width: 45rem;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  .newsletter form h3{
+    font-size: 3rem;
+    color:rgb(112, 76, 32);
+    padding-bottom: .7rem;
+    font-family: 'Cutive Mono', monospace;
+  }
+  .newsletter form .box{
+    width: 100%;
+    margin: .7rem 0;
+    padding: 1rem 1.2rem;
+    color: var(--black);
+    border-radius: .5rem;
+  }
+  .newsletter form .box2{
+    width: 30%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding: .5rem .5rem;
+    color: var(--black);
+    background-color: antiquewhite;
+    border-radius: 3rem;
+    cursor:pointer;
+    font-family: 'Cutive Mono', monospace;
+  }
+  .newsletter form .box2:hover{
+    color: var(--white);
+    background-color: var(--black);
+    outline: .1rem solid var(--white);
+  }
+  /* newsletter end */
+  
+  
+
+
+/* footer start */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap:1.5rem;
+    background-color: bisque;
+    background-position: absolute;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    padding:1rem 0;
+    color:var(--main-color);
+    font-family: 'Cutive Mono', monospace;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.5rem;
+    padding:1rem 0;
+    color:var(--main-color);
+}
+
+.footer .box-container .box a i{
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .credit{
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem 1rem;
+    margin-top: 1rem;
+    color:var(--main-color);
+}
+
+.footer .credit span{
+    border-bottom: var(--border-hover);
+}
+/* footer end */
+
+

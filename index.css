@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color:rgb(78, 78, 46); /* Main color variable */
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%; /* Border radius values */
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%; /* Border radius values on hover */
+    --border:.2rem solid var(--main-color); /* Border style */
+    --border-hover:.2rem dashed var(--main-color); /* Border style on hover */
+}
+
+* {
+    font-family: 'Poppins', sans-serif; /* Set the font family for all elements */
+    margin:0; padding:0; /* Reset margin and padding */
+    box-sizing: border-box; /* Include borders and padding in the element's total width and height */
+    outline: none; border:none; /* Remove outline and border styles */
+    text-decoration: none; /* Remove text decoration */
+    text-transform: capitalize; /* Capitalize the first letter of each word in text */
+    transition: all .2s linear; /* Add transition effect for all properties with a linear timing function */
+}
+
+html {
+    font-size: 62.5%; /* Set the base font size to 62.5% of the default size (for easy rem calculations) */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-padding-top: 7rem; /* Set padding top for smooth scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+}
+
+section {
+    padding:2rem 9%; /* Add padding to sections */
+}
+
+.heading {
+    font-size: 15rem; /* Set font size for heading */
+    text-transform: uppercase; /* Transform text to uppercase */
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: .09rem var(--main-color); /* Add stroke to the text */
+    letter-spacing: .2rem; /* Add letter spacing */
+    text-align: center; /* Center align the text */
+    pointer-events: none; /* Disable pointer events on the heading */
+    position: relative; /* Set the position to relative for positioning child elements */
+    margin-top: 3rem; /* Add top margin to the heading */
+}
+
+.heading span{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color:var(--main-color);
+    font-size: 3rem;
+}
+
+.btn{
+    display: inline-block;
+    padding:.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color:var(--main-color);
+    background-color: bisque;
+    border:var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    
+}
+
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border:var(--border-hover);
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 0 9%;
+}
+
+.header .navbar a {
+    margin: 0 4rem;
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+
+header img{
+    height: 8rem;
+    width: 20rem; /* Adjust the height of the logo as needed */
+    margin-left: -20rem;
+}
+
+
+
+.header .btn{
+    margin-top: 0;
+}
+
+
+
+
+.video-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .video-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .video-slide.active {
+    opacity: 1;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+/* Add some content at the bottom of the video/page */
+.content {
+    position: fixed;
+    bottom: 0;
+    color: #fff8ea;
+    width: 100%;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  p{margin-left: 5rem;
+    font-family: "papyrus";}
+
+    
+  /* Adding button first page */
+.btn-1{
+    display: inline-block;
+    padding:.9rem 1.5rem;
+    border-radius: var(--border-radius);
+    color:var(--main-color);
+    background: none;
+    border:var(--border);
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 10rem;
+    font-size: 1.8rem;
+    background-color: rgb(223, 201, 130);
+    }
+   
+/* Adding button hover effect */
+  .btn-1:hover{
+    border-radius: var(--border-radius-hover);
+    border:var(--border-hover);
+}
+
+
+
